@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Todo List</title>
+  <link rel="styelsheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <style>
+  *{
+    box-sizing: border-box;
+    color: white;
+  }
+  body{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+  }
+    .container{
+      width: min(90%, 500px);
+      border: 1px solid black;
+      margin: auto;
+      padding: 1rem;
+      background-color: #232323;
+      border-radius: 1rem;
+      box-shadow: 0 2px 50px #ffffff15 , 0 -2px 50px #ffffff20;
+    }
+  h3{
+    text-align: center;
+  }
+  .input{
+    display: flex;
+    justify-content: center;
+    
+  }
+  #input{
+    color: black;
+    padding: 0.25rem;
+  }
+  #add{
+    background-color: #232323;
+    margin-left: 0.25rem;
+    border: 1px solid white;
+    border-radius: 0.25rem;
+  }
+  .list{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .task{
+    display: flex;
+    border-radius: 0.25rem;
+    background-color: #343434;
+    margin: 0.5rem;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .icon i {
+    font-size: 1.2rem;
+  }
+  input[type="checkbox"]{
+    accent-color: #00ee00;
+  }
+  input[type="checkbox"]:checked ~ span{
+    text-decoration: line-through;
+    opacity: 0.5;
+    
+  }
+  input[type="checkbox"]:checked {
+  pointer-events: none; 
+  opacity: 0.6; 
+  cursor: not-allowed;
+}
+  #add:active{
+    background-color: white;
+    color: black;
+  }
+  .progress{
+    display: flex;
+    align-items: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Todolist</h3>
+    <div class="input">
+      <input type="text" placeholder="Enter your task" id="input" name="task">
+      <button id="add">Add Task</button>
+    </div>
+    <div class="list">
+      <div class="task">
+         <div class="progress">
+         <input type="checkbox" >
+         <span>Eat</span>
+        </div>
+          <div class="icon">
+            <i class="fa-solid fa-trash remove"></i>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
